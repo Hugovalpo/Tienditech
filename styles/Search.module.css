@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Mont-Heavy";
+    src: url('/Mont-HeavyDEMO.otf');
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.searchBar {
+    border-radius: 4px 0 0 4px;
+    border: 0px;
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+  .searchBar:focus {
+    outline: none;
+    background-color: rgb(224, 224, 224);
+  }
+  
+  .searchIcon {
+    width: 10%;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    padding: 6px 5px;
+    border-radius: 0 4px 4px 0;
+  
+    /* display: inline-block;
+    vertical-align: middle; */
+    /* -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0); */
+    /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
+    /* overflow: hidden; */
+    /* -webkit-transition-duration: 0.5s; */
+    transition-duration: 0.5s;
+    /* -webkit-transition-property: color, background-color;
+    transition-property: color, background-color; */
+  }
+  .searchIcon:hover {
+    background-color: #2098D1;
+    color: white;
+  }
+  
+  

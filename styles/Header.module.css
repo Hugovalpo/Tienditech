@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Mont-Heavy";
+  src: url('/Mont-HeavyDEMO.otf');
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  color:white;
+  background-color: #019521;
+  }
+
+  .titleContainer {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 30px;
+    border:1px solid green;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
+
+  .titles{
+    font-size: 30;
+    color: white;
+  }
+
+  .titleContainer:hover {
+    background-color: #2098D1;
+  }
+  
+  .cart {
+    margin: 0 16px;
+    cursor: pointer;
+    font-size: 26px;
+  }

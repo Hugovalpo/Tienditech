@@ -5,6 +5,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 4rem 0;
+  background-color: white;
 }
 
 .title {
@@ -20,3 +21,4 @@
 .title a:hover, .title a:focus, .title a:active {
   text-decoration: underline;
 }
+

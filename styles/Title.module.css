@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Mont-Heavy";
+    src: url('/Mont-HeavyDEMO.otf');
+  }
+  .title {
+    font-family: "Mont-Heavy";
+    font-size: 40px;
+    color: white;
+  }
+
+.titleContainer {
+  display: flex;
+  margin-left: 20px;
+  padding: 0 50px;
+
+}
