@@ -2,15 +2,12 @@
     font-family: "Mont-Heavy";
     src: url('/Mont-HeavyDEMO.otf');
   }
-  .title {
-    font-family: "Mont-Heavy";
-    font-size: 40px;
-    color: white;
-  }
 
-.titleContainer {
+.logoContainer {
   display: flex;
-  margin-left: 20px;
-  padding: 0 50px;
+  flex-direction: row;
+}
 
+.logo {
+  cursor:pointer;
 }

@@ -1,0 +1,68 @@
+.message {
+    margin-top: 54px;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  .sort {
+    position: absolute;
+    right: 54px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center; /* centers elements horizontally */
+    flex-wrap: wrap; /* enables multi-line flex */
+    max-width: 100vw; /* beyond 100vw, another flex line will be created */
+  }
+  
+  .card {
+    padding: 10px;
+    width: 400px;
+    margin-top: 40px;
+  }
+  
+  /* .image {
+    display: flex;
+    justify-content: center;
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    cursor: pointer;
+  } */
+
+  .image {
+    margin: 20px;
+    float: left;
+    max-height: 200px;
+    max-width: 400px;
+    object-fit: cover;
+    cursor:pointer;
+  }
+  
+  .cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: #b8b8b8 1px solid;
+  }
+  
+  .brand {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: -16px;
+  }
+  
+  .model {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: -12px;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  

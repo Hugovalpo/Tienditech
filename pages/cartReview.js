@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import CartCard from "../components/CartCard";
+//import CartCard from "../components/CartCard";
 
 export default function cartReview() {
 
