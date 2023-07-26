@@ -9,25 +9,25 @@ function Search({ placeholder, data }) {
   const router = useRouter();
   const [inputSearch, setInputSearch] = useState("");
 
-  // converts input text to lower case
+  // input text in lowerCase
   function inputHandler(e) {
     const lowerCase = e.target.value.toLowerCase();
     setInputSearch(lowerCase);
   }
 
-  // function called when user clicks on "search" (or presses "enter")
+  // function when click search
   function handleSearch() {
-    // if search field is empty, do not proceed
+    // field empty ,not search
     if (inputSearch.trim() === "") {
       alert("Search field is empty");
       return;
     }
 
-    // if search field is filled, redirect to search page with the user's input text
+    // field filled , search
     router.push({ pathname: "./search", query: { parameter: inputSearch } });
   }
 
-  // if user presses enter, execute search function
+  // press enter for search
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleSearch();

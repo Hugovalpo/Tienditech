@@ -13,18 +13,31 @@
   margin-right: 50px;
 }
  .imgContainer {
-      height: 80%;
+      max-height: 85%;
+
+    /* disabling text highlight when dragging images */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */   
  }
 
-.imgcarousel {
-     height: 100%;
-     width: 100%;
+.imgCarousel {
+     max-height: 100%;
 }
+
 .right {
   min-height: 580px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.topRight {
+  width: 26vw;
+  min-width: 300px;
 }
 
 .brand {
@@ -43,4 +56,49 @@
     margin: 0px 0px 1.7rem 0;
     font-size: 34px;
     font-weight: 400;
+  }
+
+  .button {
+    background-color: #00AAEA;
+    width: 150px;
+    border-radius: 8px;
+    border-style: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 44px;
+    line-height: 20px;
+    list-style: none;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px 14px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+  }
+  .button:hover {
+    background-color: #93bfea;
+  }
+  .button:active {
+    transform: translateY(2px);
+  }
+
+  .InfoContainer {
+    width: 30vw;
+    min-width: 300px;
   }

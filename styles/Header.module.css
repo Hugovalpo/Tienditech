@@ -66,7 +66,95 @@
 
   /* Popover Cart*/
   
+  .yourCart {
+    padding: 10px 12px 0 12px;
+    color: #858585;
+    text-align: center;
+  }
+  
+  .image {
+    height: 40px;
+    padding: 4px;
+  }
+  
+  .popoverContainer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #b8b8b8 1px solid;
+  }
+  
+  .popover {
+    margin: 8px 4px;
+    padding: 10px 12px 0 12px;
+    display: flex;
+  }
+  
+  .popoverText {
+    margin-left: 14px;
+  }
+  
   .emptyCart {
     color :#6d6d6d;
     margin: 10px;
+  }
+  
+  .brand {
+    margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: -14px;
+  }
+  
+  .model {
+    font-size: 12px;
+    margin-bottom: -14px;
+  }
+  
+  .price {
+    font-size: 12px;
+  }
+  
+  .xIcon {
+    cursor: pointer;
+    font-size: 22px;
+    margin: 20px 10px 0px 0px;
+  }
+  .xIcon:hover {
+    color: #b9b9b9;
+  }
+  
+  .popoverLast {
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .button {
+    background-color: #151515;
+    border-radius: 8px;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0 0 0 10px;
+    outline: none;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .button:hover {
+    background-color: #b9b9b9;
+  
   }

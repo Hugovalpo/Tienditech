@@ -8,17 +8,16 @@ function Slideshow() {
     <main className={styles.main}>
       <Carousel
         className={styles.carousel}
-        autoPlay={true} // enables autoplay
-        interval="4000" // how long before showing next slide
-        transitionTime="700" // how long is the animation
-        infiniteLoop={true} // loops back to first image after reaching the last one
-        showStatus={false} // hides "1 of 3" in the corner
-        showThumbs={false} // hides thumbnails
-        swipeable={true} // allows user to drag images with the mouse (default: true)
-        emulateTouch={true} // enables swipe on non-touch screens
-        stopOnHover={false} // stops slideshow on hover
-        useKeyboardArrows={true} // enables user to use keyboard arrows
-        // onClickItem={(index) => clickBanner(index)}
+        autoPlay={true} 
+        interval="4000" 
+        transitionTime="700" 
+        infiniteLoop={true} 
+        showStatus={false} 
+        showThumbs={false} 
+        swipeable={true} 
+        emulateTouch={true} 
+        stopOnHover={false} 
+        useKeyboardArrows={true}
       >
         <img className={styles.imgcarousel} src="/slideshow/slideshow0.png" />
         <img className={styles.imgcarousel} src="/slideshow/slideshow1.jpeg" />

@@ -1,0 +1,17 @@
+
+.container {
+    margin:100px;
+}
+
+
+.avatar {
+    width: 48px; /* modif width */
+    height: 32px; /* modif height */
+    border-radius: 1px; /* modif radius */
+  }
+
+  .xdelete {
+    cursor: pointer;
+    font-size: 22px;
+    margin: 5px;
+  } 
