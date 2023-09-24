@@ -33,21 +33,13 @@ function priceRow(qty, unit) {
   return qty * unit;
 }
 
-// function createRow(desc, qty, unit) {
-//   const price = priceRow(qty, unit);
-//   return { desc, qty, unit, price };
-// }
+
 
 function subtotal(items) {
   return items.reduce((sum, n) => sum + n.quantity * n.price, 0);
 }
 
-// const rows = [
-//   createRow('perro', 100, 100.99),
-//   createRow("Paperclips (Box)", 100, 1.15),
-//   createRow("Paper (Case)", 10, 45.99),
-//   createRow("Waste Basket", 2, 17.99),
-// ];
+
 
 export default function cartPage() {
   const dispatch = useDispatch();
@@ -63,7 +55,6 @@ export default function cartPage() {
   };
 
   const rows = cart;
-  console.log("valor de rows", rows);
 
   const invoiceSubtotal = subtotal(rows);
   const invoiceTaxes = TAX_RATE * invoiceSubtotal;

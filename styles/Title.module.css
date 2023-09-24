@@ -4,8 +4,10 @@
   }
 
 .logoContainer {
+  padding:5px ;
   display: flex;
   flex-direction: row;
+  /* border: 2px red solid; */
 }
 
 .logo {

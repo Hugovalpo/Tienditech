@@ -32,7 +32,7 @@ function Header() {
   const [anchorEl2, setAnchorEl2] = useState(null); // menu brands
   const [anchorEl3, setAnchorEl3] = useState(null); // menu cart
   const [cartQuantity, setCartQuantity] = useState(null);
-  const [ cartTotal, setCartTotal] = useState(null);
+  const [cartTotal, setCartTotal] = useState(null);
 
   console.log("cart with cartArticle", cart);
   // passes the article's index and dispatches the function from the reducer (remove)
@@ -46,7 +46,9 @@ function Header() {
 
   useEffect(() => {
     setCartQuantity(cart.reduce((sum, n) => sum + n.quantity, 0));
-    setCartTotal((cart.reduce((sum, n) => sum + (n.quantity * n.price), 0)).toFixed(2));
+    setCartTotal(
+      cart.reduce((sum, n) => sum + n.quantity * n.price, 0).toFixed(2)
+    );
     //setCartQuantity(cart.value.length);
   }, [cart]);
 
@@ -75,14 +77,14 @@ function Header() {
   });
 
   // displayed if cart has items: subtotal and order button
- const subtotalAndOrder = <Typography className={styles.popoverLast}>
- <Typography>Subtotal: {cartTotal} €</Typography>
- <Link href="./cartPage">
-   <button className={styles.button}>Order</button>
- </Link>
-</Typography>
-
-
+  const subtotalAndOrder = (
+    <Typography className={styles.popoverLast}>
+      <Typography>Subtotal: {cartTotal} €</Typography>
+      <Link href="./cartPage">
+        <button className={styles.button}>Order</button>
+      </Link>
+    </Typography>
+  );
 
   ////////////////////////////////////////////
 
@@ -116,73 +118,85 @@ function Header() {
   }
 
   return (
-    <div className={styles.container}>
-      <Title />
-      <div className={styles.titleContainer} onClick={openPopover}>
-        <p className={styles.titlesButton}>Categories</p>
-        <FontAwesomeIcon icon={faCaretDown} className={styles.icon} />
+    <div>
+      <div className={styles.container}>
+        <div className={styles.headerLeft}>
+          <Title />
+        </div>
+        <div className={styles.headerRight}>
+          <div className={styles.titleContainer} onClick={openPopover}>
+            <p className={styles.titleButton}>Categories</p>
+            <FontAwesomeIcon icon={faCaretDown} className={styles.icon} />
+          </div>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={() => closePopover()}
+          >
+            <MenuItem onClick={(event) => navigate(event, "categories")}>
+              LAPTOP
+            </MenuItem>
+            <MenuItem onClick={(event) => navigate(event, "categories")}>
+              Monitor
+            </MenuItem>
+            <MenuItem onClick={(event) => navigate(event, "categories")}>
+              Accessoires
+            </MenuItem>
+          </Menu>
+          <div className={styles.titleContainer} onClick={openPopover}>
+            <p className={styles.titleButton}>Brands</p>
+            <FontAwesomeIcon icon={faCaretDown} className={styles.icon} />
+          </div>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl2}
+            open={Boolean(anchorEl2)}
+            onClose={() => closePopover()}
+          >
+            <MenuItem onClick={(event) => navigate(event, "brands")}>
+              ASUS
+            </MenuItem>
+            <MenuItem onClick={(event) => navigate(event, "brands")}>
+              SAMSUNG
+            </MenuItem>
+            <MenuItem onClick={(event) => navigate(event, "brands")}>
+              HP
+            </MenuItem>
+          </Menu>
+          <div className={styles.searchContainer}>
+          <Search placeholder="Search any" />
+          </div>
+          <div className={styles.cartContainer}>
+            <FontAwesomeIcon
+              className={styles.cart}
+              icon={faCartShopping}
+              onClick={openPopover}
+            />
+            <span className={styles.item_total}>{cartQuantity}</span>
+          </div>
+          <Popover
+            open={Boolean(anchorEl3)}
+            onClose={() => closePopover()}
+            anchorEl={anchorEl3}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "right",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+          >
+            {" "}
+            {/* {cartEmpty} */}
+            {cart.length ? cartArticles : cartEmpty}{" "}
+            {/* if cart has items, display cartArticles. if cart is empty, display cartEmpty */}
+            {cart.length ? subtotalAndOrder : <></>}{" "}
+            {/* if cart has items, display subtotalAndOrder. if cart is empty, display nothing */}
+          </Popover>
+        </div>
       </div>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={() => closePopover()}
-      >
-        <MenuItem onClick={(event) => navigate(event, "categories")}>
-          LAPTOP
-        </MenuItem>
-        <MenuItem onClick={(event) => navigate(event, "categories")}>
-          Monitor
-        </MenuItem>
-        <MenuItem onClick={(event) => navigate(event, "categories")}>
-          Accessoires
-        </MenuItem>
-      </Menu>
-      <div className={styles.titleContainer} onClick={openPopover}>
-        <p className={styles.titleButton}>Brands</p>
-        <FontAwesomeIcon icon={faCaretDown} className={styles.icon} />
-      </div>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl2}
-        open={Boolean(anchorEl2)}
-        onClose={() => closePopover()}
-      >
-        <MenuItem onClick={(event) => navigate(event, "brands")}>ASUS</MenuItem>
-        <MenuItem onClick={(event) => navigate(event, "brands")}>
-          SAMSUNG
-        </MenuItem>
-        <MenuItem onClick={(event) => navigate(event, "brands")}>HP</MenuItem>
-      </Menu>
-      <Search placeholder="Search any" />
-      <div className={styles.cartContainer}>
-        <FontAwesomeIcon
-          className={styles.cart}
-          icon={faCartShopping}
-          onClick={openPopover}
-        />
-        <span className={styles.item_total}>{cartQuantity}</span>
-      </div>
-      <Popover
-        open={Boolean(anchorEl3)}
-        onClose={() => closePopover()}
-        anchorEl={anchorEl3}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-      >
-        {" "}
-        {/* {cartEmpty} */}
-        {cart.length ? cartArticles: cartEmpty}{" "}
-        {/* if cart has items, display cartArticles. if cart is empty, display cartEmpty */}
-        {cart.length ? subtotalAndOrder : <></>}{" "}
-        {/* if cart has items, display subtotalAndOrder. if cart is empty, display nothing */}
-      </Popover>
     </div>
   );
 }
