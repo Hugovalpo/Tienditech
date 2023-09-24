@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Article.module.css";
 import { useRouter } from "next/router";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
