@@ -46,7 +46,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding: 10px 60px 10px 5px;
-
 }
 
 .topRight {
@@ -115,5 +114,4 @@
   .InfoContainer {
     /* width: 30vw; */
     min-width: 300px;
-    border: 2px red solid;
   }
