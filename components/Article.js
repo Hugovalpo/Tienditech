@@ -48,25 +48,11 @@ function Article() {
       <div className={styles.main}>
         <div className={styles.left}>
           <Carousel
-            //showArrows={true}
             showStatus={false}
             showThumbs={false} // hides thumbnails
-            //swipeable={true} // allows user to drag images with the mouse (default: true)
-            //emulateTouch={true} // enables swipe on non-touch screens
-            //stopOnHover={false} // stops slideshow on hover
             useKeyboardArrows={true} // enables user to use keyboard arrows
-            // onClickItem={(index) => clickBanner(index)}
           >
             {Images}
-            {/* <div className={styles.imgContainer}>
-              <img className={styles.imgCarousel} src={article?.img[0]} />
-            </div>
-            <div className={styles.imgContainer}>
-              <img className={styles.imgCarousel} src={article?.img[1]} />
-            </div>
-            <div className={styles.imgContainer}>
-              <img className={styles.imgCarousel} src={article?.img[2]} />
-            </div> */}
           </Carousel>
         </div>
         {/* RIGHT SECTION (description, article info) */}
