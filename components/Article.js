@@ -23,7 +23,7 @@ function Article() {
       article.img.map((img) => {
         return (
           <div key={img}>
-            <img className={styles.imgCarousel} src={img} />
+            <img className={styles.imgCarousel} src={img} role="presentation"/>
           </div>
         );
       })
