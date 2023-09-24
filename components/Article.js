@@ -46,6 +46,7 @@ function Article() {
       <div className={styles.main}>
         <div className={styles.left}>
           <Carousel
+            showArrows={true}
             showThumbs={false} // hides thumbnails
             swipeable={true} // allows user to drag images with the mouse (default: true)
             emulateTouch={true} // enables swipe on non-touch screens
