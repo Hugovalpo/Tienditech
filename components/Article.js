@@ -23,7 +23,7 @@ function Article() {
       article.img.map((img) => {
         return (
           <div key={img}>
-            <img className={styles.imgCarousel} src={img} role="presentation"/>
+            <img className={styles.imgCarousel} src={img} role="presentation" />
           </div>
         );
       })
@@ -46,11 +46,12 @@ function Article() {
       <div className={styles.main}>
         <div className={styles.left}>
           <Carousel
-            showArrows={true}
+            //showArrows={true}
+            showStatus={false}
             showThumbs={false} // hides thumbnails
-            swipeable={true} // allows user to drag images with the mouse (default: true)
-            emulateTouch={true} // enables swipe on non-touch screens
-            stopOnHover={false} // stops slideshow on hover
+            //swipeable={true} // allows user to drag images with the mouse (default: true)
+            //emulateTouch={true} // enables swipe on non-touch screens
+            //stopOnHover={false} // stops slideshow on hover
             useKeyboardArrows={true} // enables user to use keyboard arrows
             // onClickItem={(index) => clickBanner(index)}
           >
@@ -66,30 +67,30 @@ function Article() {
             </div> */}
           </Carousel>
         </div>
-       {/* RIGHT SECTION (description, article info) */}
+        {/* RIGHT SECTION (description, article info) */}
         <div className={styles.right}>
           <div className={styles.topRight}>
-          <div className={styles?.cardInfo}>
-            <p className={styles.brand}>{article?.brand}</p>
-            <p className={styles.model}>{article?.model}</p>
-            <p className={styles.price}>{article?.price} €</p>
-            <div className={styles.buttonAnimation}>
-              <button
-                className={styles.button}
-                onClick={() => AddtoCart(article)}
-              >
-                <FontAwesomeIcon
-                  className={styles.cartIcon}
-                  icon={faCartPlus}
-                />
-                Add to Cart
-              </button>
-            </div>
-            <div className={styles.InfoContainer}>
-              <p className={styles.description}>{article?.description}</p>
+            <div className={styles?.cardInfo}>
+              <p className={styles.brand}>{article?.brand}</p>
+              <p className={styles.model}>{article?.model}</p>
+              <p className={styles.price}>{article?.price} €</p>
+              <div className={styles.buttonAnimation}>
+                <button
+                  className={styles.button}
+                  onClick={() => AddtoCart(article)}
+                >
+                  <FontAwesomeIcon
+                    className={styles.cartIcon}
+                    icon={faCartPlus}
+                  />
+                  Add to Cart
+                </button>
+              </div>
+              <div className={styles.InfoContainer}>
+                <p className={styles.description}>{article?.description}</p>
+              </div>
             </div>
           </div>
-          </div>  
         </div>
       </div>
     </>
