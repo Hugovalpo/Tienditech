@@ -22,7 +22,7 @@ function Article() {
     setImages(
       article.img.map((img) => {
         return (
-          <div key={img} className={styles.imgContainer}>
+          <div key={img}>
             <img className={styles.imgCarousel} src={img} />
           </div>
         );
