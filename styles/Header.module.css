@@ -52,8 +52,10 @@
        justify-content: center;
     }
     .cartContainer {
-      float: none;
-      display: block;
+      float:left;
+    padding:0px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
     }
     .searchContainer {
       float: none;
@@ -85,7 +87,7 @@
   
   .cartContainer {
     float:left;
-    padding:10px 0px 0px 20px;
+    padding:10px 0px 0px 0px;
     display: flex;
     flex-direction: row;
   }
