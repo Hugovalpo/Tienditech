@@ -5,10 +5,8 @@ import Box from "@mui/material/Box";
 
 function Home() {
   return (
-    <div>
       <main className={styles.main}>
       </main>
-    </div>
   );
 }
 

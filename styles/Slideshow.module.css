@@ -7,6 +7,7 @@
   }
   
   .carousel {
+    display:block;
     width: 100%;
     cursor: pointer;
     /* disabling text highlight */

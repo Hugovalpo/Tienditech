@@ -74,11 +74,13 @@ function search() {
 
   return (
     <>
+    <div className={styles.pageWrap}>
       <Header />
       <div className={styles.container}>
       {result()}
       </div>
       <Footer />
+    </div>
     </>
   );
 }
