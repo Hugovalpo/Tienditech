@@ -1,7 +1,7 @@
 # Tienditech
 
 ## Description
-This project was developed for educational purpose.Is a fictious e-commerce with responsive design.
+This project was developed for educational purpose.Is a ficticious e-commerce with library componentn MUI and responsive design.
 
 ## Technologies
 
@@ -9,7 +9,8 @@ Front:
 
 + Next.js
 + React
-+ JavaScript
++ React Router
++ component library MUI
 
 Back:
 
@@ -25,6 +26,7 @@ Frontend:
 + Redux store and persist
 + Components
 + Props
++ Popus
 
 Backend:
 
