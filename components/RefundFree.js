@@ -18,7 +18,7 @@ function RefundFree() {
         >
           Refund Free
         </Typography>
-    <div>
+    <div className={styles.iconContainer}>
       <FontAwesomeIcon icon={faHandHoldingDollar} style={{ fontSize: '30vh', color:'#2e3436' }}/>
     </div>
     </div>
