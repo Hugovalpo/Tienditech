@@ -4,7 +4,6 @@ import Home from "../components/Home";
 import Footer from "../components/Footer";
 import Slideshow from "../components/Slideshow";
 
-
 function Index() {
   return (
     <>
@@ -12,9 +11,9 @@ function Index() {
         <title>Tienditech - Welcome </title>
       </Head>
       <Header />
-      <Slideshow/>
-      <Home />
-      <Footer/>
+      <Slideshow />
+      <Home/>
+      <Footer />
     </>
   );
 }

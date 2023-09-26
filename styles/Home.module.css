@@ -1,14 +1,18 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+  /* flex-grow: 1; */
+  /* flex-direction: row; */
+  /* justify-content: center;
+  align-items: center; */
   /* padding: 10rem 0rem; */
-  height: 100vh;
-  background-color: rgb(22, 3, 3);
+  /* height: 90vh; */
+  background-color: rgb(255, 255, 255);
 }
 
-.title {
+/* .title {
   line-height: 1.15;
   font-size: 4rem;
 }
@@ -20,5 +24,17 @@
 
 .title a:hover, .title a:focus, .title a:active {
   text-decoration: underline;
+} */
+
+@media (max-width: 768px) {
+  .responsive-item {
+    flex-basis: 100%;
+  }
 }
 
+/* @media screen and (max-width: 500px) {
+  .main {
+    display:flex;
+    flex-direction: column;
+  }
+} */
